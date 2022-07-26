@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://use.fontawesome.com/b29ce011be.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="contacto__grilla">
+
+        <header class="headerContacto__background">
+            <nav class="headerContacto__desktop">
+                <ul class="index__lista">
+                    <li class="index__li"><a href="/index.html" class="logoEquilibrio">Equilibrio</a></li>
+                    <li class="index__li"><a href="acercade.html" class="index__enlace">Acerca de</a></li>
+        			<li class="index__li"><a href="servicios.html" class="index__enlace">Servicios</a></li>
+        			<li class="index__li"><a href="blog.html" class="index__enlace">Blog</a></li>
+        			<li class="index__li active"><a href="contacto.html" class="index__enlace">Contacto</a></li>
+                </ul>
+            </nav>
+        
+            <nav class="headerContacto__mobile">
+                <a href="/index.html" class="logoEquilibrio">Equilibrio</a>
+                <i id="menuBurger" class="fa fa-bars"></i>
+            </nav>
+            
+    
+            <section class="headerContacto__background">
+                <article>
+                <h1>Contacto</h1>
+                <h2>Contanos qué estás buscando o preguntanos tus dudas.
+                    Te contactaremos lo antes posible</h2>
+                </article>
+            </section>
+    
+        </header>
+    
+        <section>
+            <article>
+                <form action="/action_page.php"	method="post" name="formulario">
+                    <label for="nombre">Nombre y apellido: </label>
+                    <input type="text" id="nombre"><br> 
+                    <label for="contacto">Teléfono: </label>
+                    <input type="text" id="contacto"><br>
+                    <label for="genero">Género: </label>
+                    <input type="radio" name="genero" value="mujer" id="mujer">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="genero" value="hombre" id="hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="genero" value="otro" id="otro">
+                    <label for="otro">Otro</label><br>
+                    <label for="interes">Me interesa: </label>
+                    <select name="interes" id="interes">
+                        <option value="viandas">Viandas saludables</option>
+                        <option value="consulta">Consulta y antropometría</option>
+                        <option value="talleres">Talleres de cocina y nutrición</option>
+                        <option value="cursos">Cursos en línea</option>
+                        <option value="otro">Otro</option>
+                    </select><br>
+                    <label for="mensaje">Consulta: </label>
+                    <textarea id="mensaje" rows="8"></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </article>
+        </section>
+        
+        <aside>
+            <h4>¿Dónde estamos?</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.0093493584245!2d-56.18532317081805!3d-34.90551099877391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd283d44a88cfafbb!2zMzTCsDU0JzE5LjgiUyA1NsKwMTEnMDUuMiJX!5e0!3m2!1ses-419!2suy!4v1656858669869!5m2!1ses-419!2suy" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </aside>
+        
+        <section class="redes">
+            <h4>¡Seguinos en nuestras redes!</h4> 
+            
+        </section>
+        
+        
+        <footer class="footer__background">
+            <a href="/index.html" class="footer__logoEquilibrio">Equilibrio</a>
+                <div class="footer__logos">
+                    <a href="https://www.facebook.com/NutricionLauraCasella" target="_blank"><img src="/assets/img/facebook.png" alt="logofacebook"></a>
+                    <a href="https://www.instagram.com/nutriatuser/" target="_blank"><img src="/assets/img/instagram.png" alt="logoinstagram"></a>
+                    <a href="https://wa.me/+59899344704" target="_blank"><img src="/assets/img/whatsapp.png" alt="logowhatsapp"></a>
+                </div>
+            <p class="footer__texto">María Laura Casella</p>
+            <p class="footer__texto">Contacto: 099 344 704</p>
+        </footer>
+    
+    </div>
+    
+</body>
+</html>
