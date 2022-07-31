@@ -250,6 +250,9 @@ footer {
    
 }
 
+.blog__entradas article {
+   text-align: center;
+}
 
 /*
 .tabla {
@@ -554,7 +557,7 @@ nav {
    #inputHeader {
    grid-area: search;
    }
-   #contenidoBlog__grilla {
+   #contenidoBlog__layout {
    grid-area: entradasblog;
    }
    footer {
@@ -571,6 +574,7 @@ nav {
 }
    
 
+
 .contenidoBlog__flex {
    display: flex;
    flex-direction: column;
@@ -578,19 +582,19 @@ nav {
    align-items: center;
 }
 
-#contenidoBlog__grilla {
-   display: grid;
+#contenidoBlog__layout {
+   display: flex;
    column-gap: 10px;
    row-gap: 10px; 
    padding: 5%;
-   justify-content: center;
+
 }
 
-#contenidoBlog__grilla img {
+#contenidoBlog__layout img {
    max-width: 95%;
    }
    
-#contenidoBlog__grilla p {
+#contenidoBlog__layout p {
       font-family: 'Roboto', sans-serif;
       font-size: 0.8em;
       text-align: center;
@@ -599,7 +603,7 @@ nav {
       color: #3B4611;
    }
    
-#contenidoBlog__grilla h4 {
+#contenidoBlog__layout h4 {
       font-size: 1em;
       padding: 5%;
       color: #3B4611;
@@ -607,7 +611,7 @@ nav {
       text-align: center;
    }
    
-   #contenidoBlog__grilla a {
+   #contenidoBlog__layout a {
       font-size: 0.9em;
       font-family: 'Roboto', sans-serif;
       color: #A8B440;
@@ -615,9 +619,13 @@ nav {
    }
    
    @media screen and (min-width: 320px) {
-      #contenidoBlog__grilla {
-         grid-template-columns: 100%;
+      #contenidoBlog__layout {
+         flex-direction: column;
+         flex-wrap: nowrap;
+         justify-content: center;
       }
+      
+      
      .headerBlog__desktop {
          display: none;
      }
@@ -631,10 +639,17 @@ nav {
    }
 
    @media screen and (min-width: 768px) {
-      #contenidoBlog__grilla {
-         grid-template-columns: 32% 32% 32%;
-         grid-template-rows: repeat(2, auto);
+      #contenidoBlog__layout {
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
       }
+      
+      
+      .contenidoBlog__flex {
+         width: 30%;
+      }
+      
       .headerBlog__mobile {
          display: none;
          }
