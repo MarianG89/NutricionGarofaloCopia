@@ -19,6 +19,7 @@ h1 {
     color: #3B4611;
     font-size: 3em;
     margin-bottom: 0.3em;
+    padding-bottom: 1em;
 }
 
 h2 {
@@ -132,13 +133,19 @@ background-color: #9AA635;
 
 /* ---------- INDEX ---------- */
 
-aside {
-   grid-area: aside;
+#presentacion.container {
+   max-width: 86%;
 }
-header {
+
+#presentacion.row {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+nav {
    grid-area: nav;
    }
-section#presentacion {
+div#presentacion {
    grid-area: presentacion;     
 }
 section#nuestraPropuesta {
@@ -160,13 +167,13 @@ footer {
 #inicio__grilla {
    display: grid;
    grid-template-areas:
-     "nav nav"
-     "presentacion aside"
-     "nuestrapropuesta nuestrapropuesta"
-     "proximocurso proximocurso"
-     "blog blog"
-     "footer footer";
-   grid-template-columns: 50% 50%;
+     "nav"
+     "presentacion"
+     "nuestrapropuesta"
+     "proximocurso"
+     "blog"
+     "footer";
+   grid-template-columns: 100%;
 }
 
 
@@ -285,7 +292,7 @@ footer {
 
 @media screen and (min-width: 320px) {
    #inicio__grilla {
-      grid-template-rows: 2% 17% auto auto auto auto; 
+      grid-template-rows: 4% auto auto auto auto auto; 
    }
    
    .headerInicio__desktop {
@@ -328,19 +335,19 @@ footer {
 
 @media screen and (min-width: 415px) {
    #inicio__grilla {
-      grid-template-rows: 2% 12% auto auto auto auto; 
+      grid-template-rows: 4% auto auto auto auto auto; 
    }
 }
 
 @media screen and (min-width: 521px) {
    #inicio__grilla {
-      grid-template-rows: 2% 9% auto auto auto auto; 
+      grid-template-rows: 4% auto auto auto auto auto; 
    }
 }
 
 @media screen and (min-width: 768px) {
    #inicio__grilla {
-      grid-template-rows: 2% 17% auto auto auto auto; 
+      grid-template-rows: 8% auto auto auto auto auto; 
    }
    .headerInicio__mobile {
       display: none;
