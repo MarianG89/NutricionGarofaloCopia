@@ -77,6 +77,13 @@ background-color: #9AA635;
 
 /* MENU DE NAVEGACION */
 
+.headerNav {
+   display: flex;
+   justify-content: space-between;
+   padding: 4% 7%;
+   align-items: baseline;
+}
+
 .index__lista {
    display: flex;
    flex-direction: row;
@@ -112,6 +119,7 @@ background-color: #9AA635;
     text-decoration: none;
     color: #3B4611;
     font-weight: 600;
+    padding-left: 3em;
  }
  
  .logoEquilibrio {
@@ -129,6 +137,35 @@ background-color: #9AA635;
 
 .active .index__enlace {
    color: white;
+}
+
+.nav-link {
+   font-family: 'Urbanist', sans-serif;
+   color: #3B4611;
+   font-weight: 600;
+   }
+   
+   .active a .nav-link  {
+      color: white;
+   }   
+   
+.offcanvas {
+   --bs-offcanvas-bg: #D8DE96;
+   --bs-offcanvas-width: 40%;
+   
+   }
+.navbar {
+   --bs-navbar-toggler-border-color: none;
+   --bs-navbar-toggler-border-radius: none; 
+   --bs-navbar-toggler-focus-width: none;
+   
+   }
+h5#offcanvasNavbarLabel.offcanvas-title {
+   font-family: 'Caveat', cursive;
+}
+
+#menuburger {
+   color: #3B4611;
 }
 
 /* ---------- INDEX ---------- */
@@ -424,13 +461,30 @@ footer {
 font-family: 'Urbanist', sans-serif;
 }
 
+#presentacion img {
+   width: 80%;
+   border-radius: 50%;
+}
+
+/*div.col-md-6 img {
+   align-items: center;
+}*/
+
+nav {
+   grid-area: nav;
+}
+
+.acercaDe__contenido.container {
+   max-width: 86%;
+}
+
 .acercaDe__contenido {
    padding: 7%;
    grid-area: contenido;
 }
 
-nav {
-   grid-area: nav;
+#presentacion {
+   grid-area: presentacion;
 }
 
 footer {
@@ -439,8 +493,8 @@ footer {
 
 #acercaDe__grilla {
    display: grid;
-   grid-template-rows: auto auto auto;
-   grid-template-areas: "nav" "contenido" "footer";
+   grid-template-rows: auto auto auto auto;
+   grid-template-areas: "nav" "presentacion" "contenido" "footer";
 }
 
 @media screen and (min-width: 320px) {
@@ -469,6 +523,12 @@ footer {
 
 }
 
+@media screen and (min-width: 1024px) {
+   #presentacion img {
+      width: 50%;
+      border-radius: 50%;
+   }
+}
    
 /* ---------- SERVICIOS ---------- */
 
