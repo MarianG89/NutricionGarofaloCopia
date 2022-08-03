@@ -14,10 +14,14 @@
 
     <div id="inicio__grilla" class="headerInicio__backgroud"> 
 
-        <header>    
+        <header class="headerNav">  
+        
+            <div class="logoHeader">
+                <a href="index.html" class="logoEquilibrio">Equilibrio</a>
+            </div>    
+        
                 <nav class="headerInicio__desktop">
                     <ul class="index__lista">
-                        <li class="index__li"><a href="index.html" class="logoEquilibrio">Equilibrio</a></li>
                         <li class="index__li"><a href="pages/acercade.html" class="index__enlace">Acerca de</a></li>
             			<li class="index__li"><a href="pages/servicios.html" class="index__enlace">Servicios</a></li>
             			<li class="index__li"><a href="pages/blog.html" class="index__enlace">Blog</a></li>
@@ -25,10 +29,36 @@
                     </ul>
                 </nav>
                 
-                <nav class="headerInicio__mobile">
-                    <a href="index.html" class="logoEquilibrio">Equilibrio</a>
-                    <i id="menuBurger" class="fa fa-bars"></i>
-                </nav>
+                <nav class="navbar headerInicio__mobile">
+                    <div class="container">
+                      <a class="navbar-brand" href="#"></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <i id="menuBurger" class="fa fa-bars"></i>
+                      </button>
+                      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Equilibrio</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="pages/acercade.html">Acerca de</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/blog.html">Blog</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
     
         </header>
         
