@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/animate.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">        
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://use.fontawesome.com/b29ce011be.js"></script>
     <title>Servicios</title>
@@ -15,34 +14,73 @@
 <body>
     
     <div id="servicios__grilla">
-    
-        <header class="headerServicios__background">
+        
+        <header class="headerNav headerServicios__background">
+        
+            <div class="logoHeader">
+                <a href="../index.html" class="logoEquilibrio">Equilibrio</a>
+            </div>
+        
             <nav class="headerServicios__desktop">
-                <ul class="index__lista">
-                    <li class="index__li"><a href="../index.html" class="logoEquilibrio">Equilibrio</a></li>
+                <ul class="index__lista">                    
                     <li class="index__li"><a href="acercade.html" class="index__enlace">Acerca de</a></li>
         			<li class="index__li active"><a href="servicios.html" class="index__enlace">Servicios</a></li>
         			<li class="index__li"><a href="blog.html" class="index__enlace">Blog</a></li>
         			<li class="index__li"><a href="contacto.html" class="index__enlace">Contacto</a></li>
                 </ul>
             </nav>
-            
-            <nav class="headerServicios__mobile">
-                <a href="../index.html" class="logoEquilibrio">Equilibrio</a>
-                <i id="menuBurger" class="fa fa-bars"></i>
-            </nav>
-            
-            <section>
-                <article>
-                    <h1>Servicios</h1>
-                    <h2>¡Contamos con una gran variedad de servicios para que puedas adoptar un estilo de vida más saludable!</h2>
-                </article>
-            </section>    
+              
+            <nav class="navbar headerServicios__mobile">
+                <div class="container">
+                  <a class="navbar-brand" href="#"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i id="menuBurger" class="fa fa-bars"></i>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Equilibrio</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="acercade.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+                    
+        </header>
+        
+        
+        <section class="headerServicios__background">
+            <div id="presentacion" class="container animate__animated animate__slideInLeft">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h1>Servicios</h1>
+                        <h2>¡Contamos con una gran variedad de servicios para que puedas adoptar un estilo de vida más saludable!</h2>   
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
                 
-        </header>        
-                
+            </div>
+        </section>
+            
+         
             <section id="servicios__contenido">    
-                <article class="servicios__contenido">
+                <article class="servicios__contenido wow container animate__animated animate__slideInLeft">
                     <img src="../assets/img/servicios-viandas.jpg" alt="ensaladas">
                     <div>
                         <h3>Viandas saludables</h3>
@@ -57,7 +95,7 @@
                     </div>
                 </article>
                 
-                <article class="servicios__contenido">
+                <article class="servicios__contenido wow container animate__animated animate__slideInLeft">
                     <img src="../assets/img/servicios-consultas.jpg" alt="estetoscopio">
                     <div>
                         <h3>Consultas y antropometría</h3>
@@ -77,7 +115,7 @@
                     </div>    
                 </article>
                 
-                <article class="servicios__contenido">
+                <article class="servicios__contenido wow container animate__animated animate__slideInLeft">
                     <img src="../assets/img/servicios-tallerescocina.jpg" alt="tablaconingredientes">
                     <div>
                         <h3>Talleres de cocina y nutrición</h3>
@@ -91,7 +129,7 @@
                     </div>    
                 </article>
                 
-                <article class="servicios__contenido">
+                <article class="servicios__contenido wow container animate__animated animate__slideInLeft">
                     <img src="../assets/img/servicios-cursos.jpg" alt="mesadetrabajo">
                     <div>
                         <h3>Cursos en línea</h3>
@@ -121,7 +159,7 @@
                 <p class="footer__texto">Contacto: 099 344 704</p>
             </footer>
     </div>
-    <script src="js/wow.min.js"></script>
+    <script src="../js/wow.min.js"></script>
               <script>
               new WOW().init();
               </script> 
