@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/animate.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://use.fontawesome.com/b29ce011be.js"></script>
     <title>Equilibrio</title>
 </head>
 <body>
 
-    <div id="inicio__grilla"> 
+    <div id="inicio__grilla" class="headerInicio__backgroud"> 
 
-        <header class="headerInicio__backgroud">    
+        <header class="headerNav">  
+        
+            <div class="logoHeader">
+                <a href="index.html" class="logoEquilibrio">Equilibrio</a>
+            </div>    
+        
                 <nav class="headerInicio__desktop">
                     <ul class="index__lista">
-                        <li class="index__li"><a href="index.html" class="logoEquilibrio">Equilibrio</a></li>
                         <li class="index__li"><a href="pages/acercade.html" class="index__enlace">Acerca de</a></li>
             			<li class="index__li"><a href="pages/servicios.html" class="index__enlace">Servicios</a></li>
             			<li class="index__li"><a href="pages/blog.html" class="index__enlace">Blog</a></li>
@@ -24,20 +29,54 @@
                     </ul>
                 </nav>
                 
-                <nav class="headerInicio__mobile">
-                    <a href="index.html" class="logoEquilibrio">Equilibrio</a>
-                    <i id="menuBurger" class="fa fa-bars"></i>
-                </nav>
-            
-                <section id="presentacion" class="animate__animated animate__slideInLeft">
-                    <h1>Somos unidad: física, emocional y mental</h1>
-                    <h2>La alimentación saludable como una parte del autocuidado.</h2>
-                    <a href="pages/acercade.html" class="presentacion__enlace--btn" >Conocénos</a>
-                </section>
-                
-                <aside></aside>
+                <nav class="navbar headerInicio__mobile">
+                    <div class="container">
+                      <a class="navbar-brand" href="#"></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <i id="menuBurger" class="fa fa-bars"></i>
+                      </button>
+                      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Equilibrio</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="pages/acercade.html">Acerca de</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/blog.html">Blog</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
     
         </header>
+        
+        <div id="presentacion" class="container animate__animated animate__slideInLeft">
+            <div class ="row">
+                <div class="col-12 col-md-6">
+                    <h1>Somos unidad: física, emocional y mental</h1>
+                    <h2>La alimentación saludable como una parte del autocuidado.</h2>
+                    <a href="pages/acercade.html" class="presentacion__enlace--btn" >Conocénos</a>    
+                </div>
+                <div class="col-md-6">
+                    <div></div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
     
      
         <section id="nuestraPropuesta" class="animate__animated animate__bounceInUp wow">
@@ -141,6 +180,7 @@
               <script>
               new WOW().init();
               </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     
 </body>
 </html>

@@ -19,6 +19,7 @@ h1 {
     color: #3B4611;
     font-size: 3em;
     margin-bottom: 0.3em;
+    padding-bottom: 1em;
 }
 
 h2 {
@@ -76,6 +77,13 @@ background-color: #9AA635;
 
 /* MENU DE NAVEGACION */
 
+.headerNav {
+   display: flex;
+   justify-content: space-between;
+   padding: 4% 7%;
+   align-items: baseline;
+}
+
 .index__lista {
    display: flex;
    flex-direction: row;
@@ -111,6 +119,7 @@ background-color: #9AA635;
     text-decoration: none;
     color: #3B4611;
     font-weight: 600;
+    padding-left: 2.5em;
  }
  
  .logoEquilibrio {
@@ -119,9 +128,9 @@ background-color: #9AA635;
    color: white;
    font-weight: 500;
    text-decoration: none;
-   font-size: 1.5em;
+   font-size: 1.7em;
    border-radius: 15px;
-   padding: 0.3em 1em;
+   padding: 0.3em 1.2em;
    margin-top: 1%;
    position: relative;
 }
@@ -130,15 +139,50 @@ background-color: #9AA635;
    color: white;
 }
 
+.nav-link {
+   font-family: 'Urbanist', sans-serif;
+   color: #3B4611;
+   font-weight: 600;
+   }
+   
+   .active a .nav-link  {
+      color: white;
+   }   
+   
+.offcanvas {
+   --bs-offcanvas-bg: #D8DE96;
+   --bs-offcanvas-width: 40%;
+   
+   }
+.navbar {
+   --bs-navbar-toggler-border-color: none;
+   --bs-navbar-toggler-border-radius: none; 
+   --bs-navbar-toggler-focus-width: none;
+   
+   }
+h5#offcanvasNavbarLabel.offcanvas-title {
+   font-family: 'Caveat', cursive;
+}
+
+#menuburger {
+   color: #3B4611;
+}
+
 /* ---------- INDEX ---------- */
 
-aside {
-   grid-area: aside;
+#presentacion.container {
+   max-width: 86%;
 }
-header {
+
+#presentacion.row {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+nav {
    grid-area: nav;
    }
-section#presentacion {
+div#presentacion {
    grid-area: presentacion;     
 }
 section#nuestraPropuesta {
@@ -160,13 +204,13 @@ footer {
 #inicio__grilla {
    display: grid;
    grid-template-areas:
-     "nav nav"
-     "presentacion aside"
-     "nuestrapropuesta nuestrapropuesta"
-     "proximocurso proximocurso"
-     "blog blog"
-     "footer footer";
-   grid-template-columns: 50% 50%;
+     "nav"
+     "presentacion"
+     "nuestrapropuesta"
+     "proximocurso"
+     "blog"
+     "footer";
+   grid-template-columns: 100%;
 }
 
 
@@ -285,7 +329,7 @@ footer {
 
 @media screen and (min-width: 320px) {
    #inicio__grilla {
-      grid-template-rows: 2% 17% auto auto auto auto; 
+      grid-template-rows: 4% auto auto auto auto auto; 
    }
    
    .headerInicio__desktop {
@@ -328,19 +372,19 @@ footer {
 
 @media screen and (min-width: 415px) {
    #inicio__grilla {
-      grid-template-rows: 2% 12% auto auto auto auto; 
+      grid-template-rows: 4% auto auto auto auto auto; 
    }
 }
 
 @media screen and (min-width: 521px) {
    #inicio__grilla {
-      grid-template-rows: 2% 9% auto auto auto auto; 
+      grid-template-rows: 4% auto auto auto auto auto; 
    }
 }
 
 @media screen and (min-width: 768px) {
    #inicio__grilla {
-      grid-template-rows: 2% 17% auto auto auto auto; 
+      grid-template-rows: 8% auto auto auto auto auto; 
    }
    .headerInicio__mobile {
       display: none;
@@ -417,13 +461,30 @@ footer {
 font-family: 'Urbanist', sans-serif;
 }
 
+#presentacion img {
+   width: 80%;
+   border-radius: 50%;
+}
+
+/*div.col-md-6 img {
+   align-items: center;
+}*/
+
+nav {
+   grid-area: nav;
+}
+
+.acercaDe__contenido.container {
+   max-width: 86%;
+}
+
 .acercaDe__contenido {
    padding: 7%;
    grid-area: contenido;
 }
 
-nav {
-   grid-area: nav;
+#presentacion {
+   grid-area: presentacion;
 }
 
 footer {
@@ -432,8 +493,8 @@ footer {
 
 #acercaDe__grilla {
    display: grid;
-   grid-template-rows: auto auto auto;
-   grid-template-areas: "nav" "contenido" "footer";
+   grid-template-rows: auto auto auto auto;
+   grid-template-areas: "nav" "presentacion" "contenido" "footer";
 }
 
 @media screen and (min-width: 320px) {
@@ -462,6 +523,12 @@ footer {
 
 }
 
+@media screen and (min-width: 1024px) {
+   #presentacion img {
+      width: 50%;
+      border-radius: 50%;
+   }
+}
    
 /* ---------- SERVICIOS ---------- */
 
