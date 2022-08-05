@@ -13,44 +13,101 @@ body {
 h1, h3, h4, h5, h6, p, a, li {
    font-family: 'Urbanist', sans-serif;
    }
-
+   
+h1, h2, h3, h4, h5, h6, p {
+   color: #3B4611;
+}   
+   
 h1 {
-    font-weight: 800;
-    color: #3B4611;
-    font-size: 3em;
-    margin-bottom: 0.3em;
-    padding-bottom: 0.3em;
-}
-
+   font-weight: 800;  
+}   
+   
 h2 {
-    font-family: 'Caveat', cursive;
-    color: #3B4611;
-    font-size: 2em;
-    font-weight: 400;
-    margin-top: 0.2em;
-    padding-bottom: 0.3em;
-    }
-    
-h3 {
-font-weight: 600;
-font-size: 2em;
-padding-bottom: 0.5em;
-}    
+   font-family: 'Caveat', cursive;
+}   
 
-h3 span {
-font-weight: 300;
-}
+@media screen and (min-width: 320px) {
+   h1 {
+      font-size: 2em;
+      padding-top: 0.5em;
+      margin-bottom: 0.3em;
+      padding-bottom: 0.1em;
+  }
+  
+  h2 { 
+      font-size: 1.5em;
+      font-weight: 400;
+      margin-top: 0.1em;
+      padding-bottom: 0.5em;
+      }
+      
+  h3 {
+     font-weight: 600;
+     font-size: 1.5em;
+     padding-bottom: 0.3em;
+  }    
     
-h4 {
-font-weight: 600;
-font-size: 1.5em;
-padding-top: 2em;
+  h4 {
+     font-weight: 600;
+     font-size: 1em;
+     padding-top: 1em;
+     padding-bottom: 1em;
+  }
+  
+  h5 {
+     font-weight: 400;
+     font-size: 0.7em;
+  }
+  
+  p, li {
+      font-size: 0.9em;
+  }
 }
 
-h5 {
-font-weight: 400;
-font-size: 1.3em;
+@media screen and (min-width: 768px) {
+   h1 {
+      font-size: 3em;
+      padding-top: 0.2em;
+      margin-bottom: 0.3em;
+      padding-bottom: 0.3em;
+  }
+  
+  h2 { 
+      font-size: 2em;
+      font-weight: 400;
+      margin-top: 0.2em;
+      padding-bottom: 0.3em;
+      }
+      
+  h3 {
+     font-weight: 600;
+     font-size: 2em;
+     padding-bottom: 0.5em;
+  }    
+  
+  h3 span {
+     font-weight: 300;
+  }
+      
+  h4 {
+     font-weight: 600;
+     font-size: 1.5em;
+     padding-top: 2em;
+  }
+  
+  h5 {
+     font-weight: 400;
+     font-size: 1.3em;
+  }
+  
+  p, li {
+      font-size: 1em;
+  }
 }
+
+
+
+
 
 
 
@@ -154,7 +211,7 @@ background-color: #9AA635;
    
 .offcanvas {
    --bs-offcanvas-bg: #D8DE96;
-   --bs-offcanvas-width: 40%;
+   --bs-offcanvas-width: 45%;
    
    }
 .navbar {
@@ -165,6 +222,7 @@ background-color: #9AA635;
    }
 h5#offcanvasNavbarLabel.offcanvas-title {
    font-family: 'Caveat', cursive;
+   font-size: 1.3em;
 }
 
 #menuburger {
@@ -223,9 +281,13 @@ footer {
    text-decoration: none;
    background-color: #C4CD61;
    color: white;
-   padding: 15px 50px;
+   padding: 1em 2em;
    margin-bottom: 20%;
    border-radius: 10px;
+}
+
+a.presentacion__enlace--btn {
+   font-size: 0.8em;
 }
 
 .nuestraPropuesta__display1, .nuestraPropuesta__display2 {
@@ -280,9 +342,10 @@ footer {
    text-decoration: none;
    background-color: #3B4611;
    color: white;
-   padding: 15px 50px;
+   padding: 1em 2em;
    margin-bottom: 20%;
    margin-bottom: 1%;
+   border-radius: 10px;
 }
 
 .blog__entradas {
@@ -437,25 +500,40 @@ footer {
    color: white;
    font-weight: 500;
    text-decoration: none;
-   font-size: 2em;
+   font-size: 1.8em;
    text-align: center;
-   padding: 0.3em;
+   padding: 0;
 }
 
 .footer__texto {
    color: white;
    text-align: center;
    line-height: 1.3em;
+   padding-bottom: 0.1em;
 }
+
 
 .footer__logos {
    text-align: center;
-
+   padding: 2%;
 }
 
 .footer__logos a {
    padding: 1%;
 }
+
+@media screen and (min-width: 320px) {
+   .footer__logos img {
+      width: 4%;
+   }
+}
+
+@media screen and (min-width: 768px) {
+   .footer__logos img {
+      width: 2%;
+   }
+}
+
 
 
 /* ---------- ACERCA DE ---------- */
@@ -773,9 +851,6 @@ footer {
 
 
 @media screen and (min-width: 320px) {
-   #contacto__grilla {
-      
-   }
   .headerContacto__desktop {
       display: none;
   }
@@ -798,9 +873,7 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-   #contacto__grilla {
-     
-         }
+
    .headerContacto__mobile {
       display: none;
       }
