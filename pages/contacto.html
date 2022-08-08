@@ -83,51 +83,70 @@
         </section>
 
     
+       
         <section class="datosContacto">
-            <div class="container">
+           <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6">
-                        <form action="/action_page.php"	method="post" name="formulario">
-                            <label for="nombre">Nombre y apellido: </label>
-                            <input type="text" id="nombre"><br> 
-                            <label for="contacto">Teléfono: </label>
-                            <input type="text" id="contacto"><br>
-                            <label for="genero">Género: </label>
-                            <input type="radio" name="genero" value="mujer" id="mujer">
-                            <label for="mujer">Mujer</label>
-                            <input type="radio" name="genero" value="hombre" id="hombre">
-                            <label for="hombre">Hombre</label>
-                            <input type="radio" name="genero" value="otro" id="otro">
-                            <label for="otro">Otro</label><br>
-                            <label for="interes">Me interesa: </label>
-                            <select name="interes" id="interes">
-                                <option value="viandas">Viandas saludables</option>
-                                <option value="consulta">Consulta y antropometría</option>
-                                <option value="talleres">Talleres de cocina y nutrición</option>
-                                <option value="cursos">Cursos en línea</option>
-                                <option value="otro">Otro</option>
-                            </select><br>
-                            <label for="mensaje">Consulta: </label>
-                            <textarea id="mensaje" rows="4"></textarea>
-                            <input type="submit" value="Enviar">
+                    <div class="col-12 col-md-6 wow animate__animated animate__slideInLeft">
+            
+                        <form method="post" name="formulario">
+              
+                            <div class="col-12">
+                                <label for="nombre" class="form-label">Nombre y apellido</label>
+                                <input type="text" class="form-control" id="nombre">
+                            </div>
+                            <div class="col-12">
+                                <label for="contacto" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="contacto">
+                            </div>
+                            <div class="col-12">
+                                <label for="genero" class="form-label">Género</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer">
+                                        <label class="form-check-label" for="mujer">Mujer</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre">
+                                        <label class="form-check-label" for="hombre">Hombre</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero" id="otro" value="otro">
+                                        <label class="form-check-label" for="otro">Otro</label>
+                                    </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="interes" class="form-label">Me interesa</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Viandas saludables</option>
+                                        <option value="consulta">Consultas y antropometría</option>
+                                        <option value="talleres">Talleres de cocina y nutrición</option>
+                                        <option value="cursos">Cursos en línea</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                            </div>
+                            <div>
+                                <label for="mensaje" class="form-label">Consultas o comentarios</label>
+                                <textarea class="form-control" placeholder="Escribe aqui" id="mensaje" style="height: 100px"></textarea>
+    
+                            </div>
+                            
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
                         </form>
-                    
                     </div>
                     
-                    <div class="col-md-6">
+                    <div class="col-md-6 wow animate__animated animate__slideInRight">
                         <h4>¿Dónde estamos?</h4>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.0093493584245!2d-56.18532317081805!3d-34.90551099877391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd283d44a88cfafbb!2zMzTCsDU0JzE5LjgiUyA1NsKwMTEnMDUuMiJX!5e0!3m2!1ses-419!2suy!4v1656858669869!5m2!1ses-419!2suy" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.0093493584245!2d-56.18532317081805!3d-34.90551099877391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd283d44a88cfafbb!2zMzTCsDU0JzE5LjgiUyA1NsKwMTEnMDUuMiJX!5e0!3m2!1ses-419!2suy!4v1656858669869!5m2!1ses-419!2suy" width="100%" height="80%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     
                 </div>
-                
-            </article>
-        </section>
-       
+            </div>
+        </section>    
         
         <section class="redes">
-            <h4>¡Seguinos en nuestras redes!</h4> 
-            
+            <h4>¡Seguinos en nuestras redes sociales!</h4>             
         </section>
         
         
@@ -138,8 +157,8 @@
                     <a href="https://www.instagram.com/nutri.atuser/" target="_blank"><img src="../assets/img/instagram.png" alt="logoinstagram"></a>
                     <a href="https://wa.me/+59899344704" target="_blank"><img src="../assets/img/whatsapp.png" alt="logowhatsapp"></a>
                 </div>
-            <p class="footer__texto">María Laura Casella</p>
-            <p class="footer__texto">Contacto: 099 344 704</p>
+            <p class="footer__texto">Lic. María Laura Casella - Contacto: +598 99 344 704</p>
+            <p class="footer__texto">Montevideo, Uruguay</p>
         </footer>
     
     </div>

@@ -8,6 +8,7 @@ body {
     margin: 0;
 }
 
+
 /* FUENTE */
 
 h1, h3, h4, h5, h6, p, a, li {
@@ -364,16 +365,6 @@ a.presentacion__enlace--btn {
    text-align: center;
 }
 
-/*
-.tabla {
-   max-width: 100%;
-}
-
-.tabla__imagen {
-   max-width: 90%;
-   padding: 1%;
-}
-*/
 
 .blog__enlace {
    display: block;
@@ -543,7 +534,7 @@ font-family: 'Urbanist', sans-serif;
 }
 
 #presentacion img {
-   width: 80%;
+   margin-bottom: 10px;
    border-radius: 50%;
 }
 
@@ -555,12 +546,12 @@ nav {
    grid-area: nav;
 }
 
-.acercaDe__contenido.container {
+.acercaDe__contenido .container {
    max-width: 86%;
 }
 
 .acercaDe__contenido {
-   padding: 7%;
+   padding-top: 7%;
    grid-area: contenido;
 }
 
@@ -591,7 +582,15 @@ footer {
       justify-content: space-between;
       align-items: baseline;
    }
+
+   #presentacion img {
+      margin-left: 25%;
+      width: 50%;
+   }
+
 }
+
+
 
 @media screen and (min-width: 768px) {
    .headerAcercaDe__desktop {
@@ -602,12 +601,17 @@ footer {
       display: none;
    }
 
+   #presentacion img {
+      margin-left: 15%;
+      width: 70%;
+   }
 }
 
 @media screen and (min-width: 1024px) {
    #presentacion img {
-      width: 50%;
-      border-radius: 50%;
+      margin-left: 20%;
+      width: 60%;
+      border-radius: 50%; 
    }
 }
    
@@ -814,7 +818,11 @@ line-height: 2.5em;
 
 }
 
-.col-md-6.datosContacto {
+.datosContacto .container {
+   max-width: 86%;
+}
+
+.datosContacto.col-md-6 {
    padding-top: 2%;
 
 }
@@ -849,6 +857,29 @@ footer {
       grid-template-areas: "nav" "presentacion" "form" "redes" "footer";
 }
 
+.btn.btn-primary {
+   background-color: #3B4611;
+   border-color: #3B4611;
+   margin-top: 10px;
+}
+
+.btn.btn-primary:hover {
+   background-color: #7B8A23;
+   border-color: #7B8A23;
+}
+
+.form-control:hover {
+   border-color:  #7B8A23;
+}
+
+.form-check-inline {
+   line-height: 1.5em;
+}
+
+.form-check-input:checked {
+   border-color:  #7B8A23;
+   background-color:  #7B8A23;
+}
 
 @media screen and (min-width: 320px) {
   .headerContacto__desktop {
@@ -863,7 +894,7 @@ footer {
   }
   
    form {
-   padding-left: 7%;
+   
    padding-top: 7%;
    }
    
@@ -882,7 +913,7 @@ footer {
    }
    
    form {
-      padding-left: 15%;
+      
       padding-top: 15%;
    }
    
