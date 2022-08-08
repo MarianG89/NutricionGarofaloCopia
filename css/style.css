@@ -503,6 +503,9 @@ a.presentacion__enlace--btn {
    padding-bottom: 0.1em;
 }
 
+p.footer__texto {
+   font-size: 0.8em;
+}
 
 .footer__logos {
    text-align: center;
@@ -510,21 +513,32 @@ a.presentacion__enlace--btn {
 }
 
 .footer__logos a {
-   padding: 1%;
+   padding: 2%;
 }
 
 @media screen and (min-width: 320px) {
    .footer__logos img {
-      width: 4%;
+      width: 5%;
    }
 }
 
 @media screen and (min-width: 768px) {
    .footer__logos img {
-      width: 2%;
+      width: 3%;
    }
 }
 
+@media screen and (min-width: 1024px) {
+   .footer__logos img {
+      width: 2%;
+   }
+   .footer__logos a {
+      padding: 1%;
+   }
+   .footer__logos {
+      padding: 1%;
+   }
+}
 
 
 /* ---------- ACERCA DE ---------- */
@@ -584,8 +598,8 @@ footer {
    }
 
    #presentacion img {
-      margin-left: 25%;
-      width: 50%;
+      margin-left: 20%;
+      width: 60%;
    }
 
 }
@@ -853,7 +867,7 @@ footer {
 #contacto__grilla {
    display: grid;
    grid-template-columns: auto;
-      grid-template-rows: auto auto auto 10% auto; 
+      grid-template-rows: auto auto auto auto auto; 
       grid-template-areas: "nav" "presentacion" "form" "redes" "footer";
 }
 
@@ -894,13 +908,12 @@ footer {
   }
   
    form {
-   
    padding-top: 7%;
    }
    
-   aside {
-   padding-left: 7%;
-  }
+   h4 {
+      padding-top: 20%;
+   }
 }
 
 @media screen and (min-width: 768px) {
@@ -913,10 +926,14 @@ footer {
    }
    
    form {
-      
       padding-top: 15%;
    }
    
-   
+   h4 {
+      padding-top: 15%;
+   }
+   .redes h4 {
+      padding-top: 5%;
+   }
 }
 
