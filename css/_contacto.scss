@@ -1,0 +1,118 @@
+
+
+form {
+    font-family: 'Urbanist', sans-serif;
+    line-height: 2.5em;
+    grid-area: form;
+    }
+    
+.datosContacto {
+    .container {
+        max-width: 86%;
+     }
+     &.col-md-6 {
+        padding-top: 2%;
+     }
+}
+
+nav {
+    grid-area: nav;
+}
+         
+div#presentacion {
+    grid-area: presentacion;
+}     
+     
+.redes {
+    grid-area: redes;
+    text-align: center;
+    padding-top: 2%;
+}
+       
+footer {
+    grid-area: footer;
+}
+       
+#contacto__grilla {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto; 
+    grid-template-areas: "nav" "presentacion" "form" "redes" "footer";
+}
+    
+.btn {
+    &.btn-primary {
+        background-color: $colorPrincipal;
+        border-color: $colorPrincipal;
+        margin-top: 10px;
+        &:hover {
+            background-color: #7B8A23;
+            border-color: #7B8A23;
+        } 
+    }
+}
+
+
+.form-control {
+    &:hover {
+        border-color:  #7B8A23;
+    }
+}
+    
+.form-check-inline {
+    line-height: 1.5em;
+}
+    
+.form-check-input {
+    &:checked {
+        border-color:  #7B8A23;
+        background-color:  #7B8A23;
+    }
+}
+
+    
+@media screen and (min-width: 320px) {
+    .headerContacto__desktop {
+        display: none;
+    }
+    
+    .headerContacto__mobile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+      
+    form {
+       padding-top: 7%;
+    }
+       
+    h4 {
+        padding-top: 20%;
+    }
+}
+    
+@media screen and (min-width: 768px) {
+    .headerContacto__mobile {
+        display: none;
+    }
+    
+    .headerContacto__desktop {
+        display: block;
+    }
+       
+    form {
+        padding-top: 15%;
+    }
+       
+    h4 {
+        padding-top: 15%;
+    }
+       
+    .redes h4 {
+        padding-top: 5%;
+    }
+}
+    
+    
