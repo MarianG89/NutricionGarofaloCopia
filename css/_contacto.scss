@@ -38,6 +38,9 @@ footer {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto auto; 
     grid-template-areas: "nav" "presentacion" "form" "redes" "footer";
+        h4 {
+            padding-top: 20%;
+        }
 }
     
 .btn {
@@ -87,10 +90,14 @@ footer {
     form {
        padding-top: 7%;
     }
-       
-    h4 {
-        padding-top: 20%;
+    
+    .redes {
+        h5 {
+            padding-top: 20%;
+            font-size: 1em;
+        }
     }
+    
 }
     
 @media screen and (min-width: 768px) {
@@ -105,13 +112,12 @@ footer {
     form {
         padding-top: 15%;
     }
-       
-    h4 {
-        padding-top: 15%;
-    }
-       
-    .redes h4 {
-        padding-top: 5%;
+    
+    .redes {
+        h5 {
+            padding-top: 5%;
+            font-size: 1.3em;
+        }
     }
 }
     

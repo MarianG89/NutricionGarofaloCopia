@@ -24,6 +24,17 @@ h2 {
   font-family: "Caveat", cursive;
 }
 
+h3 span {
+  display: block;
+  text-align: center;
+  padding-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3B4611;
+}
+
 @media screen and (min-width: 320px) {
   h1 {
     font-size: 2em;
@@ -38,19 +49,19 @@ h2 {
     padding-bottom: 0.5em;
   }
   h3 {
-    font-weight: 600;
     font-size: 1.5em;
+    font-weight: 600;
     padding-bottom: 0.3em;
   }
   h4 {
-    font-weight: 600;
     font-size: 1em;
+    font-weight: 600;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
   }
   h5 {
-    font-weight: 400;
     font-size: 0.7em;
+    font-weight: 400;
   }
   p, li {
     font-size: 0.9em;
@@ -70,21 +81,22 @@ h2 {
     padding-bottom: 0.3em;
   }
   h3 {
-    font-weight: 600;
     font-size: 2em;
+    font-weight: 600;
     padding-bottom: 0.5em;
   }
   h3 span {
     font-weight: 300;
   }
   h4 {
-    font-weight: 600;
     font-size: 1.5em;
-    padding-top: 2em;
+    font-weight: 600;
+    padding-top: 1em;
+    padding-bottom: 2em;
   }
   h5 {
-    font-weight: 400;
     font-size: 1.3em;
+    font-weight: 400;
   }
   p, li {
     font-size: 1em;
@@ -97,22 +109,39 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.headerAcercaDe__background {
+.backgroundColor1 {
   background-color: #D8DE96;
 }
 
-.headerServicios__background {
+.backgroundColor2 {
   background-color: #C6CF66;
 }
 
-.headerBlog__background {
+.backgroundColor3 {
   background-color: #A8B440;
 }
 
-.headerContacto__background {
+.backgroundColor4 {
   background-color: #9AA635;
 }
 
+/*Sustitucion de las clases background por el mapa*/
+/*.headerAcercaDe__background {
+background-color: #D8DE96;
+}
+
+.headerServicios__background {
+background-color: #C6CF66;
+}
+
+.headerBlog__background {
+background-color: #A8B440;
+}
+
+.headerContacto__background {
+background-color: #9AA635;
+}
+*/
 /* MENU DE NAVEGACION */
 .headerNav {
   display: flex;
@@ -300,7 +329,7 @@ footer {
   grid-template-columns: 100%;
 }
 
-.presentacion__enlace--btn {
+.presentacion__enlace--btn, .comprar, .recetarios__btn, .proximoCurso__enlace--btn {
   display: inline-block;
   text-decoration: none;
   background-color: #C4CD61;
@@ -310,7 +339,7 @@ footer {
   border-radius: 10px;
 }
 
-a.presentacion__enlace--btn {
+a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlace--btn {
   font-size: 0.8em;
 }
 
@@ -359,14 +388,8 @@ a.presentacion__enlace--btn {
 }
 
 .proximoCurso__enlace--btn {
-  display: inline-block;
-  text-decoration: none;
   background-color: #3B4611;
-  color: white;
-  padding: 1em 2em;
-  margin-bottom: 20%;
-  margin-bottom: 1%;
-  border-radius: 10px;
+  margin-bottom: 10%;
 }
 
 .blog__entradas {
@@ -564,6 +587,10 @@ div#presentacion {
   padding: 7%;
 }
 
+#recetarios {
+  grid-area: recetarios;
+}
+
 footer {
   grid-area: footer;
 }
@@ -571,13 +598,14 @@ footer {
 #servicios__grilla {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "nav" "presentacion" "servicios" "footer";
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: "nav" "presentacion" "servicios" "recetarios" "footer";
 }
 
 .servicios__contenido {
   display: flex;
   flex-direction: row;
+  max-width: 100%;
 }
 .servicios__contenido img {
   width: 300px;
@@ -585,6 +613,30 @@ footer {
 }
 .servicios__contenido article {
   margin-top: 3%;
+}
+
+article.servicios__contenido {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.recetarios__btn {
+  opacity: 80%;
+  border: 2px solid #3B4611;
+  margin: 5%;
+}
+.recetarios__btn a {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.comprar {
+  background-color: #C6CF66;
+  margin-bottom: 10%;
+}
+
+a.comprar {
+  font-size: 0.8em;
 }
 
 @media screen and (min-width: 320px) {
@@ -600,6 +652,22 @@ footer {
   }
   .servicios__contenido {
     flex-wrap: wrap;
+    margin-right: 0;
+  }
+  h3 {
+    padding-top: 3%;
+  }
+  .recetarios {
+    display: none;
+  }
+  .recetariosResponsive {
+    display: flex;
+    background-image: url(../assets/img/servicios-recetarios-responsive.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -614,6 +682,23 @@ footer {
   }
   .servicios__contenido div {
     padding-left: 10%;
+  }
+  h3 {
+    padding-top: 2%;
+  }
+  .recetarios {
+    display: flex;
+    background-image: url(../assets/img/servicios-recetarios.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .recetariosResponsive {
+    display: none;
+  }
+  #servicios__contenido {
+    padding-bottom: 0;
   }
 }
 /* ---------- BLOG ---------- */
@@ -660,7 +745,7 @@ footer {
   -moz-column-gap: 10px;
        column-gap: 10px;
   row-gap: 10px;
-  padding: 5%;
+  padding: 6%;
 }
 #contenidoBlog__layout img {
   max-width: 95%;
@@ -758,6 +843,9 @@ footer {
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: "nav" "presentacion" "form" "redes" "footer";
 }
+#contacto__grilla h4 {
+  padding-top: 20%;
+}
 
 .btn.btn-primary {
   background-color: #3B4611;
@@ -796,8 +884,9 @@ footer {
   form {
     padding-top: 7%;
   }
-  h4 {
+  .redes h5 {
     padding-top: 20%;
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 768px) {
@@ -810,10 +899,8 @@ footer {
   form {
     padding-top: 15%;
   }
-  h4 {
-    padding-top: 15%;
-  }
-  .redes h4 {
+  .redes h5 {
     padding-top: 5%;
+    font-size: 1.3em;
   }
 }/*# sourceMappingURL=style.css.map */
