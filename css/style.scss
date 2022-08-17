@@ -8,7 +8,12 @@ body {
     margin: 0;
 }
 
+
 $colorPrincipal:#3B4611;
+
+a:hover {
+   color: $colorPrincipal;
+}
 
 /* FUENTE */
 
@@ -178,6 +183,9 @@ background-color: #9AA635;
 .index__li {
     position:relative;
     font-size: 20px;
+    &:hover {
+      font-size: 22px;
+    }
  }
  
 ul {
@@ -214,6 +222,13 @@ ul {
    padding: 0.3em 1.2em;
    margin-top: 1%;
    position: relative;
+}
+
+a.logoEquilibrio {
+   &:hover {
+      color: white;
+      font-size: 1.8em;
+   }
 }
 
 .active {
@@ -407,7 +422,10 @@ a.presentacion__enlace--btn {
    border-radius: 50%;
    width: 40%;
    height: auto;
+   &:hover {
+      width: 38%;      
    }
+}
    
 #proximoCurso {
    display: flex;

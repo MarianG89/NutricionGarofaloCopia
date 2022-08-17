@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+a:hover {
+  color: #3B4611;
+}
+
 /* FUENTE */
 h1, h3, h4, h5, h6, p, a, li {
   font-family: "Urbanist", sans-serif;
@@ -163,6 +167,9 @@ background-color: #9AA635;
   position: relative;
   font-size: 20px;
 }
+.index__li:hover {
+  font-size: 22px;
+}
 
 ul {
   -webkit-padding-start: 0;
@@ -198,6 +205,11 @@ ul ul li:hover {
   padding: 0.3em 1.2em;
   margin-top: 1%;
   position: relative;
+}
+
+a.logoEquilibrio:hover {
+  color: white;
+  font-size: 1.8em;
 }
 
 .active .index__enlace {
@@ -363,6 +375,9 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
   border-radius: 50%;
   width: 40%;
   height: auto;
+}
+.nuestraPropuesta__imagen--circular:hover {
+  width: 38%;
 }
 
 #proximoCurso {
@@ -629,6 +644,9 @@ article.servicios__contenido {
   font-size: 1.1em;
   font-weight: 600;
 }
+.recetarios__btn:hover {
+  background-color: white;
+}
 
 .comprar {
   background-color: #C6CF66;
@@ -686,16 +704,16 @@ a.comprar {
   h3 {
     padding-top: 2%;
   }
+  .recetariosResponsive {
+    display: none;
+  }
   .recetarios {
     display: flex;
     background-image: url(../assets/img/servicios-recetarios.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .recetariosResponsive {
-    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
   #servicios__contenido {
     padding-bottom: 0;

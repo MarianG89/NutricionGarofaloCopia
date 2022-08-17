@@ -54,6 +54,9 @@ nav {
       a {
          @include font(1.1em,600);
       }
+      &:hover {
+         background-color: white;
+      }
 }
  
  .comprar {
@@ -123,18 +126,20 @@ nav {
       padding-top: 2%
      }
      
+     .recetariosResponsive {
+      display: none;
+     }
+     
      .recetarios {
       display: flex;
       background-image: url(../assets/img/servicios-recetarios.jpg);
       background-size: 100%;
       background-repeat: no-repeat;
-      flex-direction: column;
-      flex-wrap: wrap;
+      flex-direction: row;
+      flex-wrap: nowrap;
     }
      
-     .recetariosResponsive {
-      display: none;
-     }
+     
      
      #servicios__contenido {
       padding-bottom: 0;
