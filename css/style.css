@@ -129,23 +129,6 @@ a {
   background-color: #9AA635;
 }
 
-/*Sustitucion de las clases background por el mapa*/
-/*.headerAcercaDe__background {
-background-color: #D8DE96;
-}
-
-.headerServicios__background {
-background-color: #C6CF66;
-}
-
-.headerBlog__background {
-background-color: #A8B440;
-}
-
-.headerContacto__background {
-background-color: #9AA635;
-}
-*/
 /* MENU DE NAVEGACION */
 .headerNav {
   display: flex;
