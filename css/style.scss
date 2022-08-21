@@ -306,7 +306,6 @@ h5#offcanvasNavbarLabel.offcanvas-title {
      }
  }
  
- 
  @media screen and (min-width: 320px) {
     .footer__logos img {
        width: 5%;
@@ -335,16 +334,12 @@ h5#offcanvasNavbarLabel.offcanvas-title {
 
 /* ---------- INDEX ---------- */
 
+/* Layout */
 #presentacion {
-    &.container {
-        max-width: 86%;
-    }
-    &.row {
-        padding-left: 0;
-        padding-right: 0;
-    }
+   &.container {
+      max-width: 86%;
+   }
 }
-
 
 nav {
    grid-area: nav;
@@ -369,7 +364,6 @@ section {
      }
 }
 
-
 footer {
    grid-area: footer;
 }
@@ -386,15 +380,20 @@ footer {
    grid-template-columns: 100%;
 }
 
+.col-12, .col-md-6 {
+   padding-left: 0;
+   padding-right: 0;
+}
 
 
+/* Boton */
 .presentacion__enlace--btn {
    display: inline-block;
    text-decoration: none;
-   background-color: #C4CD61;
+   background-color: #9AA635;
    color: white;
    padding: 1em 2em;
-   margin-bottom: 20%;
+   margin-bottom: 10%;
    border-radius: 10px;
 }
 
@@ -402,6 +401,7 @@ a.presentacion__enlace--btn {
    font-size: 0.8em;
 }
 
+/* Nuestra propuesta */
 .nuestraPropuesta__display1, .nuestraPropuesta__display2 {
    display: flex;
 }
@@ -427,9 +427,10 @@ a.presentacion__enlace--btn {
    }
 }
    
+/* Proximo curso */
 #proximoCurso {
    display: flex;
-   justify-content: space-between;
+   justify-content: start;
 }   
    
 .proximoCurso__background {
@@ -437,8 +438,8 @@ a.presentacion__enlace--btn {
    padding: 2%;
 }
 
-.proximoCurso__imagen {
-   padding: 5%;
+img.proximoCurso__imagen {
+   padding: 2%;
 }
 
 .proximoCurso__contenido {
@@ -449,43 +450,33 @@ a.presentacion__enlace--btn {
     }
 }
 
-
 .proximoCurso__enlace--btn {
    @extend .presentacion__enlace--btn;
    background-color: $colorPrincipal;
-   margin-bottom: 10%;
+   margin-bottom: 0;
 }
 
-.blog__entradas {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    img {
-        width: 85%;
-    }
-    article {
-        text-align: center;
-    }
-}
-
-
-.blog__enlace {
-   display: block;
-   font-family: 'Urbanist', sans-serif;
-   text-decoration: none;
-   color: $colorPrincipal;
-   font-weight: 400;
-   font-size: 1em;
-   text-align: left;
-   padding: 10%;
-}
-
+/* Blog */
 #blog a {
    display: block;
    text-align: center;
    text-decoration: none;
    color: $colorPrincipal;
+   font-weight: 600;
+   padding-bottom: 1em;
 }
+
+.carousel-inner {
+   padding: 1em;
+}
+
+.card {
+   margin: 1em;
+   border-color: $colorPrincipal;
+}
+
+
+/* Responsive del inicio */
 
 @media screen and (min-width: 320px) {
    #inicio__grilla {
@@ -509,38 +500,48 @@ a.presentacion__enlace--btn {
    }
    
    .nuestraPropuesta__display {
+      padding-top: 1%;
       width: 100%;
    }
    
-  #proximoCurso {
+   #proximoCurso {
    flex-direction: column;
    flex-wrap: nowrap;
    
-}
+   }
+   .proximoCurso__imagen--responsive {
+      padding-top: 3%;
+   }
+   
    .proximoCurso__imagen {
-      width: 85%;
+      display: none;
    }
    
-   .blog__entradas {
-      flex-direction: column;
+   .carousel-control-prev, .carousel-control-next {
+      color: $colorPrincipal;
+      opacity: 1;
    }
    
-   .blog__entradas--oculto {
+   .carousel-control-prev {
+      justify-content: flex-start;
+   }
+   
+   .carousel-control-next {
+      justify-content: flex-end;
+   }
+   
+   .fa-chevron-right:before {
+      color: $colorPrincipal;
+   }
+   
+   .fa-chevron-left:before {
+      color: $colorPrincipal;
+   }
+   #blog__desktop {
       display: none;
    }
 }
 
-@media screen and (min-width: 415px) {
-   #inicio__grilla {
-      grid-template-rows: 4% auto auto auto auto auto; 
-   }
-}
-
-@media screen and (min-width: 521px) {
-   #inicio__grilla {
-      grid-template-rows: 4% auto auto auto auto auto; 
-   }
-}
 
 @media screen and (min-width: 768px) {
    #inicio__grilla {
@@ -566,18 +567,37 @@ a.presentacion__enlace--btn {
       flex-wrap: nowrap;
    }
    
-    .proximoCurso__imagen {
-      max-width: 35%;
-      max-height: auto;
-   }
-   
-   .blog__entradas {
-      flex-direction: row;
-      flex-wrap: nowrap;
-   }
-   
-   .blog__entradas--oculto {
+   .proximoCurso__imagen {
       display: block;
+      height: auto; 
+      width: auto; 
+      max-width: 400px; 
+      max-height: 400px;
+   }
+   
+   .proximoCurso__imagen--responsive {
+      display: none;
+   }
+   
+   .carousel-inner {
+      display: flex;
+   }
+   .carousel-item {
+      display: block;
+      margin-right: 0;
+      flex: 0 0 calc(100%/3)
+   }
+   
+   .carousel-control-prev, .carousel-control-next {
+      display: none;
+   }
+   
+   #blog__desktop {
+      display: block;
+   }
+   
+   #carouselExampleControls {
+      display: none;
    }
 }
 

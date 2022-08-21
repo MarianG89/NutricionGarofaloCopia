@@ -302,12 +302,9 @@ p.footer__texto {
   }
 }
 /* ---------- INDEX ---------- */
+/* Layout */
 #presentacion.container {
   max-width: 86%;
-}
-#presentacion.row {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 nav {
@@ -341,13 +338,19 @@ footer {
   grid-template-columns: 100%;
 }
 
+.col-12, .col-md-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Boton */
 .presentacion__enlace--btn, .comprar, .recetarios__btn, .proximoCurso__enlace--btn {
   display: inline-block;
   text-decoration: none;
-  background-color: #C4CD61;
+  background-color: #9AA635;
   color: white;
   padding: 1em 2em;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   border-radius: 10px;
 }
 
@@ -355,6 +358,7 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
   font-size: 0.8em;
 }
 
+/* Nuestra propuesta */
 .nuestraPropuesta__display1, .nuestraPropuesta__display2 {
   display: flex;
 }
@@ -380,9 +384,10 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
   width: 38%;
 }
 
+/* Proximo curso */
 #proximoCurso {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .proximoCurso__background {
@@ -390,8 +395,8 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
   padding: 2%;
 }
 
-.proximoCurso__imagen {
-  padding: 5%;
+img.proximoCurso__imagen {
+  padding: 2%;
 }
 
 .proximoCurso__contenido {
@@ -404,39 +409,29 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
 
 .proximoCurso__enlace--btn {
   background-color: #3B4611;
-  margin-bottom: 10%;
+  margin-bottom: 0;
 }
 
-.blog__entradas {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-}
-.blog__entradas img {
-  width: 85%;
-}
-.blog__entradas article {
-  text-align: center;
-}
-
-.blog__enlace {
-  display: block;
-  font-family: "Urbanist", sans-serif;
-  text-decoration: none;
-  color: #3B4611;
-  font-weight: 400;
-  font-size: 1em;
-  text-align: left;
-  padding: 10%;
-}
-
+/* Blog */
 #blog a {
   display: block;
   text-align: center;
   text-decoration: none;
   color: #3B4611;
+  font-weight: 600;
+  padding-bottom: 1em;
 }
 
+.carousel-inner {
+  padding: 1em;
+}
+
+.card {
+  margin: 1em;
+  border-color: #3B4611;
+}
+
+/* Responsive del inicio */
 @media screen and (min-width: 320px) {
   #inicio__grilla {
     grid-template-rows: 4% auto auto auto auto auto;
@@ -456,30 +451,37 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
     flex-wrap: nowrap;
   }
   .nuestraPropuesta__display {
+    padding-top: 1%;
     width: 100%;
   }
   #proximoCurso {
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  .proximoCurso__imagen--responsive {
+    padding-top: 3%;
+  }
   .proximoCurso__imagen {
-    width: 85%;
-  }
-  .blog__entradas {
-    flex-direction: column;
-  }
-  .blog__entradas--oculto {
     display: none;
   }
-}
-@media screen and (min-width: 415px) {
-  #inicio__grilla {
-    grid-template-rows: 4% auto auto auto auto auto;
+  .carousel-control-prev, .carousel-control-next {
+    color: #3B4611;
+    opacity: 1;
   }
-}
-@media screen and (min-width: 521px) {
-  #inicio__grilla {
-    grid-template-rows: 4% auto auto auto auto auto;
+  .carousel-control-prev {
+    justify-content: flex-start;
+  }
+  .carousel-control-next {
+    justify-content: flex-end;
+  }
+  .fa-chevron-right:before {
+    color: #3B4611;
+  }
+  .fa-chevron-left:before {
+    color: #3B4611;
+  }
+  #blog__desktop {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {
@@ -504,15 +506,31 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
     flex-wrap: nowrap;
   }
   .proximoCurso__imagen {
-    max-width: 35%;
-    max-height: auto;
-  }
-  .blog__entradas {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  .blog__entradas--oculto {
     display: block;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  .proximoCurso__imagen--responsive {
+    display: none;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 33.3333333333%;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    display: none;
+  }
+  #blog__desktop {
+    display: block;
+  }
+  #carouselExampleControls {
+    display: none;
   }
 }
 /* ---------- ACERCA DE ---------- */
@@ -528,9 +546,6 @@ a.presentacion__enlace--btn, a.comprar, a.recetarios__btn, a.proximoCurso__enlac
   border-radius: 50%;
 }
 
-/*div.col-md-6 img {
-    align-items: center;
-}*/
 nav {
   grid-area: nav;
 }
@@ -599,7 +614,7 @@ div#presentacion {
 
 #servicios__contenido {
   grid-area: servicios;
-  padding: 7%;
+  padding: 7% 7% 0 7%;
 }
 
 #recetarios {
@@ -833,8 +848,12 @@ form {
 .datosContacto .container {
   max-width: 86%;
 }
-.datosContacto.col-md-6 {
-  padding-top: 2%;
+.datosContacto .container .col-md-6 {
+  padding-top: 0.5%;
+  padding-right: 1%;
+}
+.datosContacto .container .col-12 {
+  padding-right: 1%;
 }
 
 nav {
@@ -862,7 +881,8 @@ footer {
   grid-template-areas: "nav" "presentacion" "form" "redes" "footer";
 }
 #contacto__grilla h4 {
-  padding-top: 20%;
+  padding-top: 15%;
+  padding-bottom: 5%;
 }
 
 .btn.btn-primary {
@@ -904,6 +924,7 @@ footer {
   }
   .redes h5 {
     padding-top: 20%;
+    padding-bottom: 5%;
     font-size: 1em;
   }
 }
@@ -919,6 +940,7 @@ footer {
   }
   .redes h5 {
     padding-top: 5%;
+    padding-bottom: 5%;
     font-size: 1.3em;
   }
 }/*# sourceMappingURL=style.css.map */

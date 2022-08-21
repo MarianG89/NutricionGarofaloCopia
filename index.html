@@ -17,6 +17,7 @@
 
     <div id="inicio__grilla" class="headerInicio__backgroud"> 
         
+        <!--Header-->
         <header class="headerNav">  
         
             <div class="logoHeader">
@@ -64,10 +65,10 @@
                         </div>
                       </div>
                     </div>
-                  </nav>
-    
+                </nav>
         </header>
         
+        <!--Presentacion-->
         <div id="presentacion" class="container animate__animated animate__slideInLeft">
             <div class="row">
                 <div class="col-12 col-md-6">
@@ -78,13 +79,10 @@
                 <div class="col-md-6">
                     <div></div>
                 </div>
-            </div>
-            
-        </div>
-        
-        
+            </div>        
+        </div> 
     
-     
+        <!--Nuestra propuesta-->
         <section id="nuestraPropuesta" class="wow animate__animated animate__slideInUp">
             <h3>Nuestra propuesta</h3>
         
@@ -119,7 +117,9 @@
             </div>    
         </section>
         
+        <!--Proximo curso-->
         <section id="proximoCurso" class="proximoCurso__background wow animate__animated animate__fadeIn">
+            <img src="assets/img/menusaludable-responsive.jpg" alt="heladeraconviandas" class="proximoCurso__imagen--responsive">
             <img src="assets/img/menusaludable.jpg" alt="heladeraconviandas" class="proximoCurso__imagen">
                 <article class="proximoCurso__contenido">
                     <h3>Próximo curso</h3>
@@ -129,27 +129,76 @@
                 </article>
         </section>
         
+        <!--Blog-->
         <section id="blog" class="wow animate__animated animate__slideInUp">
             <h3>Blog</h3>
             
-            <div class="blog__entradas">
+            <div>
+                <div id="blog__desktop">   
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                    <img src="assets/img/pan.jpg" class="card-img-top" alt="tres panes caseros">
+                                <div class="card-body">
+                                    <a href="pages/blog.html#pan" class="blog__enlace">Mito: comer pan engorda</a>
+                                </div>
+                            </div>                       
+                        </div>
+                    <div class="carousel-item">
+                            <div class="card">
+                                    <img src="assets/img/granola.jpg" class="card-img-top" alt="tres panes caseros">
+                                <div class="card-body">
+                                    <a href="pages/blog.html#pan" class="blog__enlace">¿Cómo aumentar de peso de forma saludable?</a>
+                                </div>
+                            </div>                       
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                                    <img src="assets/img/carne.jpg" class="card-img-top" alt="tres panes caseros">
+                                <div class="card-body">
+                                    <a href="pages/blog.html#pan" class="blog__enlace">¿Se puede dejar de comer carne?</a>
+                                </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
             
-                <article>
-                    <img src="assets/img/pan.jpg" alt="tres panes caseros">
-                    <a href="pages/blog.html#pan" class="blog__enlace">Mito: comer pan engorda</a>
-                    
-                </article>
-            
-                <article class="blog__entradas--oculto">
-                    <img src="assets/img/granola.jpg" alt="recipiente con granola">
-                    <a href="pages/blog.html#granola" class="blog__enlace">¿Cómo aumentar de peso de forma saludable?</a>
-                </article>
-            
-                <article class="blog__entradas--oculto">
-                    <img src="assets/img/carne.jpg" alt="trozo de carne roja">
-                    <a href="pages/blog.html#carne" class="blog__enlace">¿Se puede dejar de comer carne?</a>
-                </article>   
-            
+            <div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                    <img src="assets/img/pan.jpg" class="card-img-top" alt="tres panes caseros">
+                                <div class="card-body">
+                                    <a href="pages/blog.html#pan" class="blog__enlace">Mito: comer pan engorda</a>
+                                </div>
+                            </div>                       
+                        </div>
+                    <div class="carousel-item">
+                            <div class="card">
+                                    <img src="assets/img/granola.jpg" class="card-img-top" alt="tres panes caseros">
+                                <div class="card-body">
+                                    <a href="pages/blog.html#pan" class="blog__enlace">¿Cómo aumentar de peso de forma saludable?</a>
+                                </div>
+                            </div>                       
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                                    <img src="assets/img/carne.jpg" class="card-img-top" alt="tres panes caseros">
+                                <div class="card-body">
+                                    <a href="pages/blog.html#pan" class="blog__enlace">¿Se puede dejar de comer carne?</a>
+                                </div>
+                        </div>    
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div> 
             </div>
             
             <a href="pages/blog.html">Descubrí más entradas</a>

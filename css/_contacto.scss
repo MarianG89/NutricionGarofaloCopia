@@ -1,5 +1,3 @@
-
-
 form {
     font-family: 'Urbanist', sans-serif;
     line-height: 2.5em;
@@ -9,10 +7,17 @@ form {
 .datosContacto {
     .container {
         max-width: 86%;
-     }
-     &.col-md-6 {
-        padding-top: 2%;
-     }
+        & .col-md-6 {
+            padding-top: 0.5%;
+            
+            padding-right: 1%;
+        }
+        & .col-12 {
+            
+            padding-right: 1%;
+        }
+    }
+    
 }
 
 nav {
@@ -39,7 +44,8 @@ footer {
     grid-template-rows: auto auto auto auto auto; 
     grid-template-areas: "nav" "presentacion" "form" "redes" "footer";
         h4 {
-            padding-top: 20%;
+            padding-top: 15%;
+            padding-bottom: 5%;
         }
 }
     
@@ -94,6 +100,7 @@ footer {
     .redes {
         h5 {
             padding-top: 20%;
+            padding-bottom: 5%;
             font-size: 1em;
         }
     }
@@ -116,6 +123,7 @@ footer {
     .redes {
         h5 {
             padding-top: 5%;
+            padding-bottom: 5%;
             font-size: 1.3em;
         }
     }
