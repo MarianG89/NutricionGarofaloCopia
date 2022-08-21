@@ -643,10 +643,6 @@ footer {
   flex-direction: row;
   max-width: 100%;
 }
-.servicios__contenido img {
-  width: 300px;
-  height: 300px;
-}
 .servicios__contenido article {
   margin-top: 3%;
 }
@@ -654,6 +650,10 @@ footer {
 article.servicios__contenido {
   margin-left: 0;
   margin-right: 0;
+}
+
+#viandas, #cursos, #consultas, #tallerescocina {
+  padding-left: 0;
 }
 
 .recetarios__btn {
@@ -693,6 +693,15 @@ a.comprar {
     flex-wrap: wrap;
     margin-right: 0;
   }
+  .servicios__contenido img {
+    width: 100%;
+  }
+  .viandas, .consultas, .tallerescocina, .cursos {
+    display: none;
+  }
+  .viandas-responsive, .consultas-responsive, .tallerescocina-responsive, .cursos-responsive {
+    display: block;
+  }
   h3 {
     padding-top: 3%;
   }
@@ -721,6 +730,18 @@ a.comprar {
   }
   .servicios__contenido div {
     padding-left: 10%;
+  }
+  .servicios__contenido img {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .viandas, .consultas, .tallerescocina, .cursos {
+    display: block;
+  }
+  .viandas-responsive, .consultas-responsive, .tallerescocina-responsive, .cursos-responsive {
+    display: none;
   }
   h3 {
     padding-top: 2%;
